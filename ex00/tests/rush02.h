@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   rush02.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbaleba- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aschoenh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/01 09:32:50 by sbaleba-          #+#    #+#             */
-/*   Updated: 2018/09/01 10:21:43 by sbaleba-         ###   ########.fr       */
+/*   Created: 2018/09/15 15:57:01 by aschoenh          #+#    #+#             */
+/*   Updated: 2018/09/15 16:10:18 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef RUSH02_H
+# define RUSH02_H
 
-void		ft_putchar(char c)
+typedef	struct	s_char t_char;
+struct 			s_char
 {
-	write(1, &c, 1);
-}
+	char		c;
+	t_char		*next;
+};
+
+typedef struct	s_list t_list;
+struct			s_list
+{
+	t_char	*first;
+};
+
+#endif
