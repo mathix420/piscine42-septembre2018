@@ -6,7 +6,7 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 14:57:43 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 16:45:50 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 16:26:41 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,17 @@ int		main(void)
 			l++;
 	}
 	print(list);
+	printf("hauteur :: %d; largeur :: %d\n", h, l);
+	c = 0;
+	h = 0;
+	l = 0;
+	while ((read(0, &c, 1)))
+	{
+		if (c == '\n')
+			h++;
+		if (h == 0)
+			l++;
+	}
 	printf("hauteur :: %d; largeur :: %d\n", h, l);
 	return (0);
 }
