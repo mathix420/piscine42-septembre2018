@@ -6,9 +6,11 @@
 /*   By: plungu <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 16:57:30 by plungu            #+#    #+#             */
-/*   Updated: 2018/09/15 17:15:01 by plungu           ###   ########.fr       */
+/*   Updated: 2018/09/15 17:17:10 by plungu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "RUSH02_H"
 
 struct	s_dim	ft_dimensions(t_list *list)
 {
