@@ -6,7 +6,7 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 14:57:43 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 16:45:50 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 17:36:14 by plungu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include <stdlib.h>
 #include "rush02.h"
 #define BUFF_SIZ 4096
+
+struct s_dim ft_dimensions(t_list *list);
 
 int		ft_strlen(char *str)
 {
@@ -42,6 +44,8 @@ void	print(t_list *list)
 		elem = elem->next;
 	}
 }
+
+
 
 int		main(void)
 {
@@ -84,6 +88,7 @@ int		main(void)
 			l++;
 	}
 	print(list);
-	printf("hauteur :: %d; largeur :: %d\n", h, l);
+	t_dim test = ft_dimensions(list);
+	printf("%d\n %d\n", test.x, test.y);
 	return (0);
 }
