@@ -6,7 +6,7 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 18:22:47 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 19:27:37 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 20:33:16 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void		print(t_list *list)
-{
-	t_char	*elem;
-
-	if (list->first)
-	{
-		elem = list->first;
-		while (elem->next)
-		{
-			printf("%c", elem->c);
-			elem = elem->next;
-		}
-		printf("%c", elem->c);
-	}
-}
+//void		print(t_list *list);
 
 t_char		*ft_add_node(t_list *list, t_char *last, char c)
 {
