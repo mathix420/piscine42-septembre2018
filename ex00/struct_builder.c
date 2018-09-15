@@ -6,7 +6,7 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 18:22:47 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 18:36:04 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 19:27:37 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void	print(t_list *list)
+void		print(t_list *list)
 {
 	t_char	*elem;
 
@@ -63,5 +63,3 @@ t_char		*ft_new(t_list *list, t_char *last, int x, char *v)
 		last = ft_add_node(list, last, v[3]);
 	return (last);
 }
-
-

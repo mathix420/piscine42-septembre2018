@@ -6,7 +6,7 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 18:44:03 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 18:44:12 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 19:33:28 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_list		*rush_00(int x, int y)
 {
 	t_list	*list;
 	t_char	*last;
-	int n;
+	int		n;
+
 	if (!(list = malloc(sizeof(t_list))))
 		return (NULL);
 	if (!(last = malloc(sizeof(t_char))))
@@ -45,7 +46,8 @@ t_list		*rush_01(int x, int y)
 {
 	t_list	*list;
 	t_char	*last;
-	int n;
+	int		n;
+
 	if (!(list = malloc(sizeof(t_list))))
 		return (NULL);
 	if (!(last = malloc(sizeof(t_char))))
@@ -68,7 +70,8 @@ t_list		*rush_02(int x, int y)
 {
 	t_list	*list;
 	t_char	*last;
-	int n;
+	int		n;
+
 	if (!(list = malloc(sizeof(t_list))))
 		return (NULL);
 	if (!(last = malloc(sizeof(t_char))))
@@ -114,7 +117,8 @@ t_list		*rush_04(int x, int y)
 {
 	t_list	*list;
 	t_char	*last;
-	int n;
+	int		n;
+
 	if (!(list = malloc(sizeof(t_list))))
 		return (NULL);
 	if (!(last = malloc(sizeof(t_char))))

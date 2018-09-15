@@ -6,7 +6,7 @@
 /*   By: plungu <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 16:57:30 by plungu            #+#    #+#             */
-/*   Updated: 2018/09/15 19:01:41 by aschoenh         ###   ########.fr       */
+/*   Updated: 2018/09/15 19:25:34 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ t_dim	*ft_dimensions(t_list *list)
 		return (NULL);
 	dim->x = 0;
 	dim->y = 0;
-
+	
 	while (elem->next)
-		{
-			if (elem->c != '\n' && dim->y == 0)
-				dim->x++;
-			if (elem->c == '\n')
-				dim->y++;
-			elem = elem->next;
-		}
+	{
+		if (elem->c != '\n' && dim->y == 0)
+			dim->x++;
+		if (elem->c == '\n')
+			dim->y++;
+		elem = elem->next;
+	}
 	if (elem->c == '\n')
 		dim->y++;
 	return (dim);
