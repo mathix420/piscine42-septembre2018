@@ -6,7 +6,7 @@
 /*   By: aschoenh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 15:57:01 by aschoenh          #+#    #+#             */
-/*   Updated: 2018/09/15 16:10:18 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 16:55:59 by plungu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ typedef struct	s_list t_list;
 struct			s_list
 {
 	t_char	*first;
+};
+
+typedef struct 	s_dim t_dim;
+struct			s_dim
+{
+	int			x;
+	int			y;
 };
 
 #endif
