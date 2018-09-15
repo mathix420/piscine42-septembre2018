@@ -5,28 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/01 09:27:26 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 20:26:32 by agissing         ###   ########.fr       */
+/*   Created: 2018/09/15 14:57:43 by agissing          #+#    #+#             */
+/*   Updated: 2018/09/15 22:10:05 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "rush02.h"
 
-void	print(t_list *list);
-t_list	*rush_00(int x, int y);
-t_list	*rush_01(int x, int y);
-t_list	*rush_02(int x, int y);
-t_list	*rush_03(int x, int y);
-t_list	*rush_04(int x, int y);
-
-int		main(int c, char **v)
+void	print(t_list *list)
 {
-	(void)c;
-	print(rush_00(atoi(v[1]), atoi(v[2])));
-	print(rush_01(atoi(v[1]), atoi(v[2])));
-	print(rush_02(atoi(v[1]), atoi(v[2])));
-	print(rush_03(atoi(v[1]), atoi(v[2])));
-	print(rush_04(atoi(v[1]), atoi(v[2])));
+	t_char	*elem;
+
+	elem = list->first;
+	while (elem->next)
+	{
+		ft_putchar(elem->c);
+		elem = elem->next;
+	}
+	ft_putchar(elem->c);
+}
+
+int		main(void)
+{
+	t_list	*list;
+	t_char	*elem;
+	t_char	*last;
+	char	c;
+
+	if (!(list = malloc(sizeof(t_list))))
+		return (0);
+	list->first = NULL;
+	while ((read(0, &c, 1)))
+	{
+		if (!(elem = malloc(sizeof(t_char))))
+			return (0);
+		elem->c = c;
+		elem->next = NULL;
+		if (!list->first)
+			list->first = elem;
+		else
+			last->next = elem;
+		last = elem;
+	}
+	ft_print_result(list);
 	return (0);
 }

@@ -6,22 +6,11 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 19:50:38 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 20:37:06 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 21:58:05 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
-#include <unistd.h>
-
-t_list	*rush_00(int x, int y);
-t_list	*rush_01(int x, int y);
-t_list	*rush_02(int x, int y);
-t_list	*rush_03(int x, int y);
-t_list	*rush_04(int x, int y);
-t_dim	*ft_dimensions(t_list *list);
-void	ft_putstr(char *str);
-void	ft_putchar(char c);
-void	ft_putnbr(int i);
 
 int		ft_comp(t_list *list, t_list *ref)
 {
@@ -32,7 +21,7 @@ int		ft_comp(t_list *list, t_list *ref)
 		elem = list->first;
 	if (ref->first)
 		e_ref = ref->first;
-	if((!ref->first && list->first) || (ref->first && !list->first))
+	if ((!ref->first && list->first) || (ref->first && !list->first))
 		return (0);
 	while (elem->next && e_ref->next)
 	{

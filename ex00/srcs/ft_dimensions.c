@@ -6,11 +6,10 @@
 /*   By: plungu <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 16:57:30 by plungu            #+#    #+#             */
-/*   Updated: 2018/09/15 19:25:34 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 21:58:33 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "rush02.h"
 
 t_dim	*ft_dimensions(t_list *list)
@@ -25,7 +24,6 @@ t_dim	*ft_dimensions(t_list *list)
 		return (NULL);
 	dim->x = 0;
 	dim->y = 0;
-	
 	while (elem->next)
 	{
 		if (elem->c != '\n' && dim->y == 0)

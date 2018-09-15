@@ -6,15 +6,11 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 18:22:47 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 20:33:16 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/15 21:38:45 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-//void		print(t_list *list);
 
 t_char		*ft_add_node(t_list *list, t_char *last, char c)
 {
