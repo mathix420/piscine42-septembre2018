@@ -1,0 +1,1 @@
+ldapsearch -xLLL sn | grep BON | wc -l | bc

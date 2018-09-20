@@ -1,0 +1,6 @@
+Credentials cache: API:01A9ABFF-A23D-4DB7-A36D-9BDF3B7CE709
+        Principal: agissing@42.FR
+
+  Issued                Expires               Principal
+Aug 27 08:49:47 2018  Sep  3 08:49:47 2018  krbtgt/42.FR@42.FR
+Aug 27 09:42:46 2018  Sep  3 08:49:47 2018  host/vgs-fn1.42.fr@42.FR
