@@ -6,7 +6,7 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/19 22:33:45 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/19 22:38:10 by agissing         ###   ########.fr       */
+/*   Updated: 2018/09/20 14:07:07 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putstr(char *str, int out)
 
 void	ft_print_error(int code, char *name)
 {
-	ft_putstr("cat: ", 2);
+	ft_putstr("tail: ", 2);
 	ft_putstr(name, 2);
 	if (code == EACCES)
 		ft_putstr(": Permission denied\n", 2);
@@ -39,7 +39,7 @@ int		ft_p(char *v, char *str)
 {
 	int     rd;
 	int     fd;
-	
+
 	fd = open(v, O_RDONLY);
 	if (fd != -1)
 	{
