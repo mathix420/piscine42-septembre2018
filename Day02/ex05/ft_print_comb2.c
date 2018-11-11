@@ -6,9 +6,11 @@
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/29 11:18:48 by agissing          #+#    #+#             */
-/*   Updated: 2018/08/29 21:50:07 by agissing         ###   ########.fr       */
+/*   Updated: 2018/08/29 21:57:32 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_print_comb2(void)
 {
