@@ -5,48 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/15 14:57:43 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/15 22:10:05 by agissing         ###   ########.fr       */
+/*   Created: 2018/09/17 11:02:50 by agissing          #+#    #+#             */
+/*   Updated: 2018/09/18 20:54:04 by julaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.h"
+#include "../includes/main.h"
 
-void	print(t_list *list)
+int		main(int c, char **v)
 {
-	t_char	*elem;
+	int		i;
 
-	elem = list->first;
-	while (elem->next)
+	i = 0;
+	if (c > 1)
+		while (++i < c)
+		{
+			if (!ft_read(v[i]))
+				ft_error("map error\n");
+			if (c > 2 && i < c - 1)
+				ft_putchar('\n');
+		}
+	else
 	{
-		ft_putchar(elem->c);
-		elem = elem->next;
+		if (!ft_read_stdin())
+			ft_error("map error\n");
 	}
-	ft_putchar(elem->c);
-}
-
-int		main(void)
-{
-	t_list	*list;
-	t_char	*elem;
-	t_char	*last;
-	char	c;
-
-	if (!(list = malloc(sizeof(t_list))))
-		return (0);
-	list->first = NULL;
-	while ((read(0, &c, 1)))
-	{
-		if (!(elem = malloc(sizeof(t_char))))
-			return (0);
-		elem->c = c;
-		elem->next = NULL;
-		if (!list->first)
-			list->first = elem;
-		else
-			last->next = elem;
-		last = elem;
-	}
-	ft_print_result(list);
 	return (0);
 }
