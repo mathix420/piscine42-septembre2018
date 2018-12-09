@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/02 14:39:33 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/03 13:48:42 by agissing         ###   ########.fr       */
+/*   Created: 2018/09/03 17:54:26 by agissing          #+#    #+#             */
+/*   Updated: 2018/09/06 22:03:10 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_recursive_power(int nb, int power)
+char	*ft_strstr(char *str, char *to_find)
 {
-	if (power < 0)
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (to_find[0] == '\0')
+		return (str);
+	if (str[0] == '\0')
 		return (0);
-	else if (power == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_power(nb, power - 1));
+	while (str[i])
+	{
+		while (str[i + j] == to_find[j] && str[i + j] && to_find[j])
+			j++;
+		if (to_find[j] == '\0')
+			return (&str[i]);
+		else
+			j = 0;
+		i++;
+	}
+	return (0);
 }

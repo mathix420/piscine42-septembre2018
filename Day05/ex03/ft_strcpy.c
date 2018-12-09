@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sort.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agissing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 19:32:09 by agissing          #+#    #+#             */
-/*   Updated: 2018/09/13 20:13:56 by agissing         ###   ########.fr       */
+/*   Created: 2018/09/03 15:08:45 by agissing          #+#    #+#             */
+/*   Updated: 2018/09/03 15:13:58 by agissing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_is_sort(int *tab, int length, int (*f)(int, int))
+char	*ft_strcpy(char *dest, char *src)
 {
-	int		i;
+	int i;
 
 	i = 0;
-	while (i < length - 1)
+	while (src[i])
 	{
-		if (f(tab[i], tab[i + 1]) > 0)
-			return (0);
+		dest[i] = src[i];
 		i++;
 	}
-	return (1);
+	dest[i] = '\0';
+	return (dest);
 }
